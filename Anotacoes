@@ -1,0 +1,37 @@
+yarn init -y
+
+-Prisma
+-Express
+-Typescript
+-Bcrypt
+-JsonWebToken
+-ts node-dev
+
+yarn add typescript ts-node-dev @types/express @types/jsonwebtoken @types/bcrypt -D
+yarn add prisma -D
+yarn add express bcrypt jsonwebtoken @prisma/client
+yarn tsc --init
+
+tsconfig ->
+{
+  "compilerOptions": {
+    "sourceMap": true,
+    "outDir": "dist",
+    "strict": true,
+    "lib": ["esnext"],
+    "esModuleInterop": true,
+  }
+}
+
+yarn prisma init
+yarn prisma migrate dev
+
+@@map("deliveryman")
+
+yarn prisma format
+
+yarn prisma studio
+
+yarn add express-async-errors
+
+yarn prisma generate
