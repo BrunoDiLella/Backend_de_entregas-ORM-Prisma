@@ -1,0 +1,50 @@
+{
+  "openapi": "3.0.0",
+  "info": {
+    "title": "API Delivery",
+    "description": "This is an API Delivery",
+    "version": "1.0.0",
+    "contact": {
+      "name": "API Delivery",
+      "email": "brgoncalves@hotmail.com.br"
+    }
+  },
+  "paths": {
+      "/client": {
+          "post": {
+                "tags": ["Clientes"],
+              "summary": "Cadastrar cliente",
+                "description": "Criar um cadastro de cliente",
+                "requestBody": {
+                    "content": {
+                        "application/json": {
+                            "schema": {
+                                "type": "object",
+                                "properties": {
+                                    "username": {
+                                        "type": "string",
+                                        "example": "Cliente Teste"
+                                    },
+                                    "password": {
+                                        "type": "string",
+                                        "example": "123456"
+                                    }  
+                                }
+                            }
+                        }   
+                    }
+                },
+                "responses": {
+                    "201": {
+                        "description": "Cliente criado com sucesso"
+                    },
+                    "400": {
+                        "description": "Erro ao criar cliente"
+                    }
+                }
+            }
+            
+        }
+    }
+    
+}

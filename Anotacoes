@@ -35,3 +35,6 @@ yarn prisma studio
 yarn add express-async-errors
 
 yarn prisma generate
+
+yarn add swagger-ui-express
+yarn add @types/swagger-ui-express -D
